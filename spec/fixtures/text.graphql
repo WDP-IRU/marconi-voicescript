@@ -1,0 +1,10 @@
+
+query {
+  eventCollection(limit: 10) {
+    items {
+      description
+      pointsRequired
+      specialConditions
+    }
+  }
+}

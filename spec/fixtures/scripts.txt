@@ -1,0 +1,18 @@
+Hi, welcome to the WDP Capital Card Events Feed.
+
+There are {{ eventCollection.items.size }} Events coming up this week:
+
+{% for event in eventCollection.items %}
+  {{ event.description }}
+  {% if event.pointsRequired == 0 %}
+    Event does not require any points to attend.
+  {% else event.pointsRequired == 0 %}
+    Event requires {{ event.pointsRequired }} Points to attend.
+  {% endif %}
+  {% if event.specialConditions.size > 0 %}
+    The following may apply:
+    {% for condition in event.specialConditions %}
+      {{ condition }}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
