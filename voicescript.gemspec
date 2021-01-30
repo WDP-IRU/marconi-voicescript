@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name        = 'voicescript'
-    s.version     = '0.0.1'
+    s.version     = '0.0.2'
     s.summary     = "Contentful & Twilio Integration Library"
     s.description = "WDP Proprietary Library for integrating Contentful & Twilio"
     s.authors     = ["Ray Jaffer"]
