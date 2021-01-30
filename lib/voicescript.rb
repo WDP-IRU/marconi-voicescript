@@ -1,4 +1,4 @@
-#require './lib/voicescript/errors'
-#require './lib/voicescript/interpreter'
-#require './lib/voicescript/query'
-#xrequire './lib/voicescript/config'
+require_relative 'voicescript/errors'
+require_relative 'voicescript/interpreter'
+require_relative 'voicescript/query'
+require_relative 'voicescript/config'
