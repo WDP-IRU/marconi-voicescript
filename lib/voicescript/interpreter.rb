@@ -42,6 +42,8 @@ module VoiceScript
       parsed_template.render!(graphql_query_data)
     rescue Liquid::Error => e
       raise VoiceScript::Errors::TemplateError, "Couldn't parse Liquid template (error message: #{e.message})"
+    rescue Graphlient::Errors::FaradayServerError => e
+      raise VoiceScript::Errors::GraphQLError, "GraphQL error: (error message: #{e.class} / #{e.message} #{e.response})"
     rescue Graphlient::Errors::Error => e
       raise VoiceScript::Errors::GraphQLError, "GraphQL error: (error message: #{e.class} / #{e.message})"
     end
